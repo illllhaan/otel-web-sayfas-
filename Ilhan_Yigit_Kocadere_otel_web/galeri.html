@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="İlhan Hotel Kapadokya için kurumsal otel tanıtım portalı.">
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Galeri | İlhan Hotel Kapadokya</title>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+    <!-- Navigasyon: tüm sayfalarda kullanılan sticky menü -->
+    <header class="site-header" id="site-header">
+        <nav class="navbar container" aria-label="Ana menü">
+            <a class="brand" href="index.html" aria-label="İlhan Hotel ana sayfa">
+                <img src="assets/icons/logo-ilhan.webp" alt="İlhan Hotel logosu" class="brand-logo">
+                <span>İlhan Hotel</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Menüyü aç veya kapat" aria-controls="primary-navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-list" id="primary-navigation">
+                <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                <li><a href="odalar.html" class="nav-link">Odalar & Fiyatlar</a></li>
+                <li><a href="rezervasyon.html" class="nav-link">Rezervasyon</a></li>
+                <li><a href="galeri.html" class="nav-link active">Galeri</a></li>
+                <li><a href="hakkimizda.html" class="nav-link">Hakkımızda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Sayfa başlığı: galeri hero alanı -->
+        <section class="page-hero gallery-hero" aria-labelledby="gallery-title">
+            <div class="container page-hero-content">
+                <p class="eyebrow">Galeri</p>
+                <h1 id="gallery-title">Kapadokya atmosferini yansıtan görseller</h1>
+                <p>Görsellere tıklayarak lightbox penceresinde büyük görüntüleyebilirsiniz.</p>
+            </div>
+        </section>
+
+        <!-- Galeri: CSS Grid ile responsive ızgara ve JS lightbox -->
+        <section class="section container" aria-labelledby="gallery-grid-title">
+            <div class="section-heading compact">
+                <p class="eyebrow">Fotoğraf seçkisi</p>
+                <h2 id="gallery-grid-title">Otel ve çevre görselleri</h2>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+                <button class="gallery-item" type="button" data-full="assets/images/hero-cappadocia-ilhan-hotel.webp" data-caption="İlhan Hotel Kapadokya dış görünüş">
+                    <img src="assets/images/hero-cappadocia-ilhan-hotel.webp" alt="Kapadokya taş butik otel ve balon manzarası">
+                </button>
+                <button class="gallery-item" type="button" data-full="assets/images/oda-standart.webp" data-caption="Standart taş oda">
+                    <img src="assets/images/oda-standart.webp" alt="Standart taş odada sade ve sıcak konaklama alanı">
+                </button>
+                <button class="gallery-item" type="button" data-full="assets/images/gallery-reception.webp" data-caption="Resepsiyon alanı">
+                    <img src="assets/images/gallery-reception.webp" alt="İlhan Hotel taş mimarili resepsiyon alanı">
+                </button>
+                <button class="gallery-item" type="button" data-full="assets/images/oda-deluxe.webp" data-caption="Vadi manzaralı deluxe oda">
+                    <img src="assets/images/oda-deluxe.webp" alt="Vadi manzaralı deluxe mağara oda iç tasarımı">
+                </button>
+                <button class="gallery-item" type="button" data-full="assets/images/oda-suite.webp" data-caption="Kemerli suit oda">
+                    <img src="assets/images/oda-suite.webp" alt="Dört kişilik kemerli suit oda ve Kapadokya manzarası">
+                </button>
+                <button class="gallery-item" type="button" data-full="assets/images/gallery-breakfast.webp" data-caption="Teras kahvaltısı">
+                    <img src="assets/images/gallery-breakfast.webp" alt="Kapadokya terasında kahvaltı alanı">
+                </button>
+                <button class="gallery-item" type="button" data-full="assets/images/gallery-spa.webp" data-caption="Sessiz spa alanı">
+                    <img src="assets/images/gallery-spa.webp" alt="Taş mimarili spa havuzu">
+                </button>
+                <button class="gallery-item" type="button" data-full="assets/images/gallery-restaurant.webp" data-caption="Yerel restoran">
+                    <img src="assets/images/gallery-restaurant.webp" alt="Yerel yemek servisi yapılan restoran alanı">
+                </button>
+                <button class="gallery-item" type="button" data-full="assets/images/gallery-courtyard.webp" data-caption="İç avlu">
+                    <img src="assets/images/gallery-courtyard.webp" alt="Otelin taş iç avlusu ve oturma alanı">
+                </button>
+                <button class="gallery-item" type="button" data-full="assets/images/gallery-balloons.webp" data-caption="Balon rotası manzarası">
+                    <img src="assets/images/gallery-balloons.webp" alt="Kapadokya sıcak hava balonları manzarası">
+                </button>
+            </div>
+        </section>
+
+        <!-- Lightbox modal: JavaScript ile açılıp kapanır -->
+        <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Galeri görsel önizleme">
+            <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Lightbox kapat">×</button>
+            <figure>
+                <img src="assets/images/gallery-balloon-view.webp" alt="" id="lightbox-image">
+                <figcaption id="lightbox-caption"></figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <!-- Footer: iletişim ve hızlı erişim bilgileri -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="footer-brand" href="index.html">
+                    <img src="assets/icons/logo-ilhan.webp" alt="İlhan Hotel küçük logo">
+                    <span>İlhan Hotel Kapadokya</span>
+                </a>
+                <p>Kapadokya'nın taş mimarisinden ilham alan butik otel deneyimi.</p>
+            </div>
+            <div>
+                <h2>İletişim</h2>
+                <address>
+                    Gaferli Mah. Vadi Sok. No: 12, Göreme / Nevşehir<br>
+                    <a href="tel:+903842190249">+90 384 219 02 49</a><br>
+                    <a href="mailto:info@ilhanhotel.example">info@ilhanhotel.example</a>
+                </address>
+            </div>
+            <div>
+                <h2>Hızlı Menü</h2>
+                <a href="rezervasyon.html">Rezervasyon Yap</a>
+                <a href="odalar.html">Odaları İncele</a>
+                <a href="galeri.html">Galeri</a>
+            </div>
+        </div>
+        <p class="copyright">© 2026 İlhan Hotel. BGY206 Web Programlama-I final projesi.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

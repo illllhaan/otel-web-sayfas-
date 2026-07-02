@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="İlhan Hotel Kapadokya için kurumsal otel tanıtım portalı.">
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>İlhan Hotel Kapadokya | Ana Sayfa</title>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+    <!-- Navigasyon: tüm sayfalarda kullanılan sticky menü -->
+    <header class="site-header" id="site-header">
+        <nav class="navbar container" aria-label="Ana menü">
+            <a class="brand" href="index.html" aria-label="İlhan Hotel ana sayfa">
+                <img src="assets/icons/logo-ilhan.webp" alt="İlhan Hotel logosu" class="brand-logo">
+                <span>İlhan Hotel</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Menüyü aç veya kapat" aria-controls="primary-navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-list" id="primary-navigation">
+                <li><a href="index.html" class="nav-link active">Ana Sayfa</a></li>
+                <li><a href="odalar.html" class="nav-link">Odalar & Fiyatlar</a></li>
+                <li><a href="rezervasyon.html" class="nav-link">Rezervasyon</a></li>
+                <li><a href="galeri.html" class="nav-link">Galeri</a></li>
+                <li><a href="hakkimizda.html" class="nav-link">Hakkımızda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero: büyük görsel, slogan ve rezervasyon butonu -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-overlay container">
+                <p class="eyebrow">Kapadokya'da butik konaklama</p>
+                <h1 id="hero-title">Taş dokunun, balon manzarasının ve sakinliğin buluştuğu otel.</h1>
+                <p>İlhan Hotel, Göreme'nin doğal atmosferini modern konforla birleştirir.</p>
+                <div class="hero-actions">
+                    <a href="rezervasyon.html" class="btn btn-primary">Rezervasyon Yap</a>
+                    <a href="odalar.html" class="btn btn-secondary">Odaları İncele</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Özet bilgi: yıldız, konum ve avantaj kartları -->
+        <section class="section container" aria-labelledby="summary-title">
+            <div class="section-heading">
+                <p class="eyebrow">Neden İlhan Hotel?</p>
+                <h2 id="summary-title">Kapadokya ruhuna uygun konforlu bir deneyim</h2>
+                <p>Turistler için tasarlanan otelimiz, bölgenin doğal renklerini, taş mimarisini ve sıcak misafirperverliğini yansıtır.</p>
+            </div>
+            <div class="info-strip" aria-label="Otel kısa bilgileri">
+                <div><strong>★★★★</strong><span>4 yıldız butik hizmet</span></div>
+                <div><strong>Göreme</strong><span>Merkezi Kapadokya konumu</span></div>
+                <div><strong>24/7</strong><span>Ön büro ve danışma</span></div>
+            </div>
+            <div class="cards three-columns">
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">♨</span>
+                    <h3>Ücretsiz Spa Kullanımı</h3>
+                    <p>Taş mimarili dinlenme alanında günün yorgunluğunu atabileceğiniz sakin bir atmosfer.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">✈</span>
+                    <h3>Havalimanı Transferi</h3>
+                    <p>Nevşehir ve Kayseri havalimanlarından otele konforlu transfer desteği.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">☀</span>
+                    <h3>Teras Kahvaltısı</h3>
+                    <p>Balon manzarasına karşı yerel ürünlerle hazırlanmış zengin kahvaltı servisi.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Tanıtım: otelin tasarım dili ve bölge bağlantısı -->
+        <section class="section warm-section" aria-labelledby="design-title">
+            <div class="container split-layout">
+                <div>
+                    <p class="eyebrow">Bölge ile uyumlu tasarım</p>
+                    <h2 id="design-title">Kapadokya'nın sıcak toprak tonlarından ilham aldık</h2>
+                    <p>Web sitesinde tan, kahverengi ve krem tonları kullanıldı. Bu renkler Kapadokya'nın peri bacalarını, taş odalarını ve gün batımı atmosferini temsil eder.</p>
+                    <a class="text-link" href="hakkimizda.html">Otel hikayesini oku</a>
+                </div>
+                <img src="assets/images/gallery-balloon-view.webp" alt="İlhan Hotel Kapadokya balon rotası ve otel manzarası" class="rounded-media">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer: iletişim ve hızlı erişim bilgileri -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="footer-brand" href="index.html">
+                    <img src="assets/icons/logo-ilhan.webp" alt="İlhan Hotel küçük logo">
+                    <span>İlhan Hotel Kapadokya</span>
+                </a>
+                <p>Kapadokya'nın taş mimarisinden ilham alan butik otel deneyimi.</p>
+            </div>
+            <div>
+                <h2>İletişim</h2>
+                <address>
+                    Gaferli Mah. Vadi Sok. No: 12, Göreme / Nevşehir<br>
+                    <a href="tel:+903842190249">+90 384 219 02 49</a><br>
+                    <a href="mailto:info@ilhanhotel.example">info@ilhanhotel.example</a>
+                </address>
+            </div>
+            <div>
+                <h2>Hızlı Menü</h2>
+                <a href="rezervasyon.html">Rezervasyon Yap</a>
+                <a href="odalar.html">Odaları İncele</a>
+                <a href="galeri.html">Galeri</a>
+            </div>
+        </div>
+        <p class="copyright">© 2026 İlhan Hotel. BGY206 Web Programlama-I final projesi.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

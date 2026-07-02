@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="İlhan Hotel Kapadokya için kurumsal otel tanıtım portalı.">
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Odalar & Fiyatlar | İlhan Hotel Kapadokya</title>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+    <!-- Navigasyon: tüm sayfalarda kullanılan sticky menü -->
+    <header class="site-header" id="site-header">
+        <nav class="navbar container" aria-label="Ana menü">
+            <a class="brand" href="index.html" aria-label="İlhan Hotel ana sayfa">
+                <img src="assets/icons/logo-ilhan.webp" alt="İlhan Hotel logosu" class="brand-logo">
+                <span>İlhan Hotel</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Menüyü aç veya kapat" aria-controls="primary-navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-list" id="primary-navigation">
+                <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                <li><a href="odalar.html" class="nav-link active">Odalar & Fiyatlar</a></li>
+                <li><a href="rezervasyon.html" class="nav-link">Rezervasyon</a></li>
+                <li><a href="galeri.html" class="nav-link">Galeri</a></li>
+                <li><a href="hakkimizda.html" class="nav-link">Hakkımızda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Sayfa başlığı: odalar sayfası hero alanı -->
+        <section class="page-hero rooms-hero" aria-labelledby="rooms-title">
+            <div class="container page-hero-content">
+                <p class="eyebrow">Odalar & Fiyatlar</p>
+                <h1 id="rooms-title">Her misafir profiline uygun taş oda seçenekleri</h1>
+                <p>Fiyat, kapasite ve manzara bilgilerine göre odaları karşılaştırın.</p>
+            </div>
+        </section>
+
+        <!-- Oda filtreleme: JavaScript ile dinamik kart arama -->
+        <section class="section container" aria-labelledby="filter-title">
+            <div class="section-heading compact">
+                <p class="eyebrow">Dinamik filtreleme</p>
+                <h2 id="filter-title">Odanızı hızlıca bulun</h2>
+            </div>
+            <form class="filter-panel" id="room-filter-form" aria-describedby="filter-result">
+                <div class="form-group">
+                    <label for="capacity-filter">Minimum kapasite</label>
+                    <select id="capacity-filter" name="capacity-filter">
+                        <option value="0">Fark etmez</option>
+                        <option value="2">2 kişi</option>
+                        <option value="3">3 kişi</option>
+                        <option value="4">4 kişi</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="price-filter">Maksimum gecelik fiyat</label>
+                    <select id="price-filter" name="price-filter">
+                        <option value="99999">Fark etmez</option>
+                        <option value="3200">3.200 TL</option>
+                        <option value="4500">4.500 TL</option>
+                        <option value="6200">6.200 TL</option>
+                    </select>
+                </div>
+                <button type="reset" class="btn btn-secondary" id="filter-reset">Filtreleri Temizle</button>
+            </form>
+            <p id="filter-result" class="helper-text" aria-live="polite">3 oda listeleniyor.</p>
+
+            <!-- Oda kartları: her kartta görsel, açıklama ve ul/li özellik listesi -->
+            <div class="cards room-grid" id="room-list">
+                <article class="room-card" data-capacity="2" data-price="2800">
+                    <img src="assets/images/oda-standart.webp" alt="Standart taş odada çift kişilik yatak ve kemerli pencere">
+                    <div class="room-card-content">
+                        <h3>Standart Taş Oda</h3>
+                        <p>Kapadokya taş dokusunu ekonomik ve konforlu bir seçenekle yaşamak isteyen misafirler için.</p>
+                        <ul>
+                            <li>2 kişi kapasite</li>
+                            <li>Çift kişilik yatak</li>
+                            <li>Bahçe manzarası</li>
+                            <li>Gecelik 2.800 TL</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="room-card" data-capacity="3" data-price="4200">
+                    <img src="assets/images/oda-deluxe.webp" alt="Deluxe mağara odada geniş yatak ve vadi manzaralı pencere">
+                    <div class="room-card-content">
+                        <h3>Deluxe Mağara Oda</h3>
+                        <p>Geniş oturma alanı ve vadiye bakan penceresiyle daha ferah bir butik oda deneyimi.</p>
+                        <ul>
+                            <li>3 kişi kapasite</li>
+                            <li>Queen yatak + tek yatak</li>
+                            <li>Vadi manzarası</li>
+                            <li>Gecelik 4.200 TL</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="room-card" data-capacity="4" data-price="5900">
+                    <img src="assets/images/oda-suite.webp" alt="Kemerli suite odada geniş yatak ve balon manzarası">
+                    <div class="room-card-content">
+                        <h3>Kemerli Suite</h3>
+                        <p>Aileler ve uzun konaklamalar için özel oturma alanı bulunan geniş suite oda.</p>
+                        <ul>
+                            <li>4 kişi kapasite</li>
+                            <li>King yatak + çekyat</li>
+                            <li>Balon manzarası</li>
+                            <li>Gecelik 5.900 TL</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Karşılaştırma tablosu: thead, tbody ve hover efekti kullanılır -->
+        <section class="section container" aria-labelledby="compare-title">
+            <div class="section-heading compact">
+                <p class="eyebrow">Karşılaştırma</p>
+                <h2 id="compare-title">Oda kategorileri tablosu</h2>
+            </div>
+            <div class="table-wrapper">
+                <table class="comparison-table">
+                    <caption>İlhan Hotel oda tipleri, kapasite, yatak, manzara ve fiyat karşılaştırması</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Oda Tipi</th>
+                            <th scope="col">Kapasite</th>
+                            <th scope="col">Yatak Tipi</th>
+                            <th scope="col">Manzara</th>
+                            <th scope="col">Gecelik Fiyat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Standart Taş Oda</th>
+                            <td>2 kişi</td>
+                            <td>Çift kişilik yatak</td>
+                            <td>Bahçe</td>
+                            <td>2.800 TL</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Deluxe Mağara Oda</th>
+                            <td>3 kişi</td>
+                            <td>Queen + tek yatak</td>
+                            <td>Vadi</td>
+                            <td>4.200 TL</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Kemerli Suite</th>
+                            <td>4 kişi</td>
+                            <td>King + çekyat</td>
+                            <td>Balon</td>
+                            <td>5.900 TL</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer: iletişim ve hızlı erişim bilgileri -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="footer-brand" href="index.html">
+                    <img src="assets/icons/logo-ilhan.webp" alt="İlhan Hotel küçük logo">
+                    <span>İlhan Hotel Kapadokya</span>
+                </a>
+                <p>Kapadokya'nın taş mimarisinden ilham alan butik otel deneyimi.</p>
+            </div>
+            <div>
+                <h2>İletişim</h2>
+                <address>
+                    Gaferli Mah. Vadi Sok. No: 12, Göreme / Nevşehir<br>
+                    <a href="tel:+903842190249">+90 384 219 02 49</a><br>
+                    <a href="mailto:info@ilhanhotel.example">info@ilhanhotel.example</a>
+                </address>
+            </div>
+            <div>
+                <h2>Hızlı Menü</h2>
+                <a href="rezervasyon.html">Rezervasyon Yap</a>
+                <a href="odalar.html">Odaları İncele</a>
+                <a href="galeri.html">Galeri</a>
+            </div>
+        </div>
+        <p class="copyright">© 2026 İlhan Hotel. BGY206 Web Programlama-I final projesi.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

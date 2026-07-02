@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="İlhan Hotel Kapadokya için kurumsal otel tanıtım portalı.">
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Rezervasyon | İlhan Hotel Kapadokya</title>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+    <!-- Navigasyon: tüm sayfalarda kullanılan sticky menü -->
+    <header class="site-header" id="site-header">
+        <nav class="navbar container" aria-label="Ana menü">
+            <a class="brand" href="index.html" aria-label="İlhan Hotel ana sayfa">
+                <img src="assets/icons/logo-ilhan.webp" alt="İlhan Hotel logosu" class="brand-logo">
+                <span>İlhan Hotel</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Menüyü aç veya kapat" aria-controls="primary-navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-list" id="primary-navigation">
+                <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                <li><a href="odalar.html" class="nav-link">Odalar & Fiyatlar</a></li>
+                <li><a href="rezervasyon.html" class="nav-link active">Rezervasyon</a></li>
+                <li><a href="galeri.html" class="nav-link">Galeri</a></li>
+                <li><a href="hakkimizda.html" class="nav-link">Hakkımızda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Sayfa başlığı: rezervasyon hero alanı -->
+        <section class="page-hero reservation-hero" aria-labelledby="reservation-title">
+            <div class="container page-hero-content">
+                <p class="eyebrow">Online Rezervasyon</p>
+                <h1 id="reservation-title">Konaklama talebinizi hızlıca oluşturun</h1>
+                <p>Form doğrulaması ve tarih kontrolü JavaScript ile tarayıcı tarafında yapılır.</p>
+            </div>
+        </section>
+
+        <!-- Rezervasyon formu: label, focus, validation ve bildirim özellikleri -->
+        <section class="section container reservation-layout" aria-labelledby="form-title">
+            <div>
+                <p class="eyebrow">Rezervasyon formu</p>
+                <h2 id="form-title">Bilgilerinizi girin</h2>
+                <p>Giriş tarihi çıkış tarihinden sonra olamaz. Eksik veya hatalı alanlar kırmızı çerçeveyle vurgulanır.</p>
+                <div class="contact-card">
+                    <h3>Yardıma mı ihtiyacınız var?</h3>
+                    <p>Ön büromuz 24 saat hizmet verir.</p>
+                    <a href="tel:+903842190249">+90 384 219 02 49</a>
+                </div>
+            </div>
+            <form class="reservation-form" id="reservation-form" novalidate>
+                <div class="form-message" id="form-message" aria-live="polite"></div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="fullname">Ad Soyad</label>
+                        <input type="text" id="fullname" name="fullname" autocomplete="name" required placeholder="Adınızı ve soyadınızı yazın">
+                        <small class="error-text">Ad soyad alanı zorunludur.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-posta adresi</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required placeholder="ornek@mail.com">
+                        <small class="error-text">Geçerli bir e-posta adresi girin.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon numarası</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" required placeholder="05xx xxx xx xx">
+                        <small class="error-text">Telefon alanı zorunludur.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="room-type">Oda tipi seçimi</label>
+                        <select id="room-type" name="room-type" required>
+                            <option value="">Oda tipi seçin</option>
+                            <option value="standart">Standart Taş Oda</option>
+                            <option value="deluxe">Deluxe Mağara Oda</option>
+                            <option value="suite">Kemerli Suite</option>
+                        </select>
+                        <small class="error-text">Bir oda tipi seçin.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkin">Giriş tarihi</label>
+                        <input type="date" id="checkin" name="checkin" required>
+                        <small class="error-text">Giriş tarihi zorunludur.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout">Çıkış tarihi</label>
+                        <input type="date" id="checkout" name="checkout" required>
+                        <small class="error-text">Çıkış tarihi giriş tarihinden sonra olmalıdır.</small>
+                    </div>
+                </div>
+                <label class="checkbox-row" for="campaigns">
+                    <input type="checkbox" id="campaigns" name="campaigns">
+                    <span>Kampanyalardan haberdar olmak istiyorum.</span>
+                </label>
+                <button type="submit" class="btn btn-primary form-submit">Form Gönder</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer: iletişim ve hızlı erişim bilgileri -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="footer-brand" href="index.html">
+                    <img src="assets/icons/logo-ilhan.webp" alt="İlhan Hotel küçük logo">
+                    <span>İlhan Hotel Kapadokya</span>
+                </a>
+                <p>Kapadokya'nın taş mimarisinden ilham alan butik otel deneyimi.</p>
+            </div>
+            <div>
+                <h2>İletişim</h2>
+                <address>
+                    Gaferli Mah. Vadi Sok. No: 12, Göreme / Nevşehir<br>
+                    <a href="tel:+903842190249">+90 384 219 02 49</a><br>
+                    <a href="mailto:info@ilhanhotel.example">info@ilhanhotel.example</a>
+                </address>
+            </div>
+            <div>
+                <h2>Hızlı Menü</h2>
+                <a href="rezervasyon.html">Rezervasyon Yap</a>
+                <a href="odalar.html">Odaları İncele</a>
+                <a href="galeri.html">Galeri</a>
+            </div>
+        </div>
+        <p class="copyright">© 2026 İlhan Hotel. BGY206 Web Programlama-I final projesi.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
